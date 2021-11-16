@@ -5,6 +5,7 @@ import {Center, A4} from "./styles/template";
 import Profile from "./assets/images/profile.jpg"
 import Maresi from "./assets/images/icons/maresi.png"
 import f8 from "./assets/images/icons/f8lite.png"
+import PAW from "./assets/images/icons/paw.png"
 
 import { FaRegEnvelope, FaGithub, FaHome, FaLinkedin } from "react-icons/fa";
 
@@ -13,12 +14,12 @@ const data = {
     name: "Gabriele Arcangelo Scalici",
     role: "Full Stack Web Developer",
     subtitle: "Amo la tecnologia e i modi in cui essa può migliorare la vita di tutti.",
-    description: `Ho vissuto per più di 10 anni nel Regno Unito, sviluppando ottime conoscenze informatiche e di
-    public relations. Sviluppo web e apps da più di 15 anni, ultimamente specializzandomi in Javascript, Python,
-    e PHP. Lavoro su tutti i sistemi operativi, ho lavorato come SysAdmin in passato e
-    seguo il modello OSI per troubleshooting. Ho studiato per il Cisco CCNA e attualmente lavoro
-    come developer in proprio, studiando Computer Science alla University of The People,
-    California, e partecipando attivamente al gruppo di iniziativa civica OpenDataSicilia. `,
+    description: `Ho vissuto per più di 10 anni nel Regno Unito, dove ho coltivato la mia passione per la musica
+    e per la tecnologia, lavorando come musicista e come corriere in bicicletta. La passione per la tecnologia è
+    sempre stata forte sin dalla mia infanzia, ma col tempo è andata solamente a degenerare. Amo Python, Javascript
+    e tutto ciò che si può costruire al di là del linguaggio utilizzato. 
+    Lavoro su tutti i sistemi operativi, ho lavorato come SysAdmin e seguo il modello OSI per troubleshooting.
+    Studio attualmente Computer Science presso la University of The People, California, anche partecipando attivamente al gruppo di iniziativa civica nazionale OpenDataSicilia.`,
   },
   contacts: [
     {
@@ -77,7 +78,7 @@ const data = {
         },
         {
           name: "Altro",
-          value: "Adobe Creative Suite, Solidity, Cardano Blockchain, AWS, Proxmox, JAVA (base), R, C++, Arduino etc ..."
+          value: "Adobe Creative Suite, Solidity, Cardano Blockchain, AWS, Proxmox, JAVA (base), R, C++, GraphQL etc ..."
         }
       ]
     },
@@ -86,7 +87,7 @@ const data = {
       values: [
         {
           name: null,
-          value: "3D Printing, Ciclismo, Meditazione, VR"
+          value: "3D Printing, Ciclismo, Meditazione, VR, Arduino e laser cutters, la Musica e tutta l'Arte in generale, ciò che luccica di vita propria, e ciò che anche se spesso sottovalutato, ha un intrinsico potere per cambiare il mondo."
         }
       ]
     }
@@ -96,14 +97,23 @@ const data = {
       name: "MareSì",
       thumbnail: Maresi,
       description: "Un'app per scoprire la qualità delle acque vicine, e le relative misurazioni batteriche",
-      tech: "API backend in Node, webapp in React e versione mobile in React Native (early access), scraper in Python."
+      tech: "API backend in Node, webapp in React e versione mobile in React Native (early access), scraper in Python.",
+      url: "https://maresi.app/"
     },
     {
       name: "f8lite",
       thumbnail: f8,
       description: "Software gestionale utilizzato dalla ASP Bagheria per il tracciamento pazienti positivi al COVID-19",
-      tech: "Sviluppato in Laravel, promosso su VICE Motherboard."
+      tech: "Sviluppato in Laravel e React, promosso da VICE Motherboard.",
+      url: "https://www.vice.com/it/article/wx5ekx/sicilia-dati-comuni-covid"
     },
+    {
+      name: "Palermo Art Weekend",
+      thumbnail: PAW,
+      description: "Chief Technology officer",
+      tech: "Gestione reparto tecnologico, hosting, e supporto tecnico durante l'organizzazione e lo svolgimento dell'evento.",
+      url: "https://palermoculture.comune.palermo.it/palermo-culture-eventi-dettaglio.php?id=277"
+    }
   ]
 }
 
@@ -140,7 +150,7 @@ export default function CV() {
               }
               </Links>
               <Col8>
-                <h3 style={{textAlign: 'justify', textJustify:'auto'}}>{data.personal.description}</h3>
+                <h3 style={{textAlign:'justify',textJustify:'auto',marginTop:'-18px'}}>{data.personal.description}</h3>
               </Col8>
             </Row>
 
@@ -167,25 +177,41 @@ export default function CV() {
                 </div>
               </Langs>
               <Col8>
-                <h2 style={{textAlign:'right'}}>Ultimi Lavori</h2>
+                <h2 style={{textAlign:'right',fontWeight:'500'}}>Qualche ultimo Lavoro</h2>
                 <div>
                   {
-                    data.career.map((work) => (
-                      <Work>
-                        <Col3 style={{alignSelf:'top'}}>
-                          <img src={work.thumbnail} alt={work.name} />
-                        </Col3>
-                        <Col9>
-                          <h2>{work.name}</h2>
-                          <h3>{work.description}</h3>
-                          <h4>{work.tech}</h4>
-                        </Col9>
-                      </Work>
+                    data.career.map((work, i) => (
+                      <a key={i} href={work.url} target="_blank" rel="noreferrer">
+                        <Work>
+                          <Col3 style={{alignSelf:'top'}}>
+                            <img src={work.thumbnail} alt={work.name} />
+                          </Col3>
+                          <Col9>
+                            <h2>{work.name}</h2>
+                            <h3>{work.description}</h3>
+                            <h4>{work.tech}</h4>
+                          </Col9>
+                        </Work>
+                      </a>
                     ))
                   }
                 </div>
               </Col8>
             </Row>
+
+            <Footer>
+              <div style={{marginTop:'50px'}}>
+                <p>
+                  Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base all’art. 13 del D. Lgs.
+                  196/2003 e all’art. 13 del Regolamento UE 2016/679, ed attesto la veridicità dello stesso ai sensi del DPR
+                  n.445/2000.
+                </p>
+                <p>
+                  Il seguente CV è stato sviluppato in React, e il codice distribuito gratuitamente sotto licenza <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0 - Creative Commons</a>.
+                  <br/>Il repository è disponibile su GitHub al link <a href="https://github.com/gabacode/about-me" target="_blank" rel="noreferrer">https://github.com/gabacode/about-me</a>.
+                </p>
+              </div>
+            </Footer>
           
           </Container>
         </A4>
@@ -211,10 +237,6 @@ const ProfilePic = styled.img`
     border-radius: 100%;
     width: 168px;
     box-shadow: inset 3px 6px 10px black;
-    // &:hover{
-    //   filter: brightness(1.33) grayscale(0%);
-    // }
-    // transition: .618s;
 `
 const Links = styled(Col4)`
     margin-bottom:50px;
@@ -255,7 +277,16 @@ const Work = styled(Row)`
     h4{
       font-weight: 200;
       font-size:9pt;
-      margin: 0px;
+      margin-top: -6px;
       text-align: left;
+    }
+`
+
+const Footer = styled(Row)`
+    p, a{
+      font-size:10px;
+      text-align:center;
+      color:#777;
+      margin: 10px auto;
     }
 `
