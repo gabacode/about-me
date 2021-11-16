@@ -1,0 +1,26 @@
+body,h1,h2{
+  margin-bottom: 0.618px;
+  margin-top: 0;
+}
+h3{
+  margin-top: 3.618px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+  font-size: 26pt;
+}
+h2{
+  font-size: 18pt;
+}
+h3{
+  font-weight: 300;
+  font-size: 11pt;
+}
