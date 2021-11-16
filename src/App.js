@@ -297,6 +297,7 @@ const Footer = styled(Row)`
 `
 
 const PrintBtn = styled.button`
+    font-weight: bold;
     margin-top: -50px;
     margin-bottom: 50px;
     height: 50px;
