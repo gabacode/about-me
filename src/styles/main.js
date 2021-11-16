@@ -12,6 +12,14 @@ const Header = styled(Row)`
       text-align:right;
     }
 `
+
+const Flag = styled.img`
+    width: 25px;
+    margin-right: 8px;
+    display: inline;
+    cursor: pointer;
+`
+
 const ProfilePic = styled.img`
     filter: brightness(1.33);
     border-radius: 100%;
@@ -86,4 +94,4 @@ const PrintBtn = styled.button`
     }
 `
 
-export { Header, ProfilePic, Links, Langs, Work, Footer, PrintBtn }
+export { Header, Flag, ProfilePic, Links, Langs, Work, Footer, PrintBtn }

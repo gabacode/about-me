@@ -4,6 +4,7 @@ const print = (divName) => {
     document.body.innerHTML = printContents;
     window.print();
     document.body.innerHTML = originalContents;
+    window.location.reload();
 }
 
 export default print;
