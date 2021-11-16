@@ -19,7 +19,7 @@ export default function CV() {
   return (
     <>
       <Center>
-        <Row style={{position:'relative', top:'42px', right:'-107mm'}}>
+        <Row style={{position:'relative', top:'42px', right:'-99mm'}}>
           <Flag src={en} onClick={() => setLanguage('en')} alt="English"/>
           <Flag src={it} onClick={() => setLanguage('it')} alt="Italian"/>
         </Row>

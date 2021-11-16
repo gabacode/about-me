@@ -17,7 +17,7 @@ const A4 = styled.div`
   background-color: white;
   height: 297mm;
   width: 210mm;
-  margin: 80px auto;
+  margin: 60px auto;
   padding: 10mm;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 `
