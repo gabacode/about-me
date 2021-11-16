@@ -2,6 +2,8 @@ import styled from "styled-components";
 import {Container, Row, Col3, Col4, Col8, Col9} from "./styles/bootstrap";
 import {Center, A4} from "./styles/template";
 
+import print from "./lib/print";
+
 import Profile from "./assets/images/profile.jpg"
 import Maresi from "./assets/images/icons/maresi.png"
 import f8 from "./assets/images/icons/f8lite.png"
@@ -121,7 +123,7 @@ export default function CV() {
   return (
     <>
       <Center>
-        <A4>
+        <A4 id='printMe'>
           <Container>
             
             <Header>
@@ -215,6 +217,9 @@ export default function CV() {
           
           </Container>
         </A4>
+        <PrintBtn onClick={() => print('printMe')}>
+          STAMPA
+        </PrintBtn>
       </Center>
     </>
   );
@@ -288,5 +293,21 @@ const Footer = styled(Row)`
       text-align:center;
       color:#777;
       margin: 10px auto;
+    }
+`
+
+const PrintBtn = styled.button`
+    margin-top: -50px;
+    margin-bottom: 50px;
+    height: 50px;
+    background-color: #6fc128;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    width: 200px;
+    &:hover{
+        transform: translateY(-3px);
+        transition: .1s;
     }
 `
