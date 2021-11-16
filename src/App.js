@@ -1,9 +1,12 @@
 import styled from "styled-components";
-import {Container, Row, Col4, Col8} from "./styles/bootstrap";
+import {Container, Row, Col3, Col4, Col8, Col9} from "./styles/bootstrap";
 import {Center, A4} from "./styles/template";
-import Profile from "./assets/images/profile.jpg"
 
-import { FaRegEnvelope, FaGithub, FaHome, FaInstagram, FaFacebook, FaSoundcloud, FaLinkedin } from "react-icons/fa";
+import Profile from "./assets/images/profile.jpg"
+import Maresi from "./assets/images/icons/maresi.png"
+import f8 from "./assets/images/icons/f8lite.png"
+
+import { FaRegEnvelope, FaGithub, FaHome, FaLinkedin } from "react-icons/fa";
 
 const data = {
   personal: {
@@ -36,24 +39,6 @@ const data = {
       url: 'https://github.com/gabacode',
       nick: 'gabacode'
     },
-    // {
-    //   name: 'Facebook',
-    //   icon: FaFacebook,
-    //   url: 'https://fb.com/gabaman',
-    //   nick: 'gabaman'
-    // },
-    // {
-    //   name: 'Instagram',
-    //   icon: FaInstagram,
-    //   url: 'https://instagram.com/gabapics',
-    //   nick: 'gabapics'
-    // },
-    // {
-    //   name: 'Soundcloud',
-    //   icon: FaSoundcloud,
-    //   url: 'https://soundcloud.com/gaba41',
-    //   nick: 'gaba41'
-    // },
     {
       name: 'LinkedIn',
       icon: FaLinkedin,
@@ -80,19 +65,19 @@ const data = {
       values: [
         {
           name: "Frontend",
-          value: "React, Next.js, Gatsby, Bootstrap, TailwindCSS"
+          value: "React, Next.js, Gatsby, Bootstrap, TailwindCSS ..."
         },
         {
           name: "Backend",
-          value: "Node, Python, PHP, Laravel, Wordpress, MySQL, Sqlite, MongoDB"
+          value: "Node Express, Python Flask, PHP, Laravel, Wordpress, SQL, MySQL, Sqlite, MongoDB, JSON API ..."
         },
         {
           name: "Mobile",
-          value: "React Native, Flutter"
+          value: "React Native, Ionic, Flutter"
         },
         {
           name: "Altro",
-          value: "Adobe Suite"
+          value: "Adobe Creative Suite, Solidity, Cardano Blockchain, AWS, Proxmox, JAVA (base), R, C++, Arduino etc ..."
         }
       ]
     },
@@ -101,10 +86,24 @@ const data = {
       values: [
         {
           name: null,
-          value: "Meditazione, Ciclismo, Tecnologia, VR"
+          value: "3D Printing, Ciclismo, Meditazione, VR"
         }
       ]
     }
+  ],
+  career: [
+    {
+      name: "MareSì",
+      thumbnail: Maresi,
+      description: "Un'app per scoprire la qualità delle acque vicine, e le relative misurazioni batteriche",
+      tech: "API backend in Node, webapp in React e versione mobile in React Native (early access), scraper in Python."
+    },
+    {
+      name: "f8lite",
+      thumbnail: f8,
+      description: "Software gestionale utilizzato dalla ASP Bagheria per il tracciamento pazienti positivi al COVID-19",
+      tech: "Sviluppato in Laravel, promosso su VICE Motherboard."
+    },
   ]
 }
 
@@ -150,25 +149,41 @@ export default function CV() {
                 <div>
                   {
                     data.skills
-                    .map((skill, i) => (
-                      <div key={i}>
-                        <h2>{skill.name}</h2>
-                        {
-                          skill.values.map((s, i) => (
-                            <h3 key={i}>
-                              {s.name ? `${s.name}: ${s.value}` : s.value}
-                            </h3>
+                      .map((skill, i) => (
+                        <div key={i}>
+                          <h2>{skill.name}</h2>
+                          {
+                            skill.values.map((s, i) => (
+                              <h3 key={i}>
+                                {s.name ? `${s.name}: ${s.value}` : s.value}
+                              </h3>
+                              )
                             )
-                          )
-                        }
-                      </div>
+                          }
+                        </div>
+                        )
                       )
-                    )
                   }
                 </div>
               </Langs>
               <Col8>
                 <h2 style={{textAlign:'right'}}>Ultimi Lavori</h2>
+                <div>
+                  {
+                    data.career.map((work) => (
+                      <Work>
+                        <Col3 style={{alignSelf:'top'}}>
+                          <img src={work.thumbnail} alt={work.name} />
+                        </Col3>
+                        <Col9>
+                          <h2>{work.name}</h2>
+                          <h3>{work.description}</h3>
+                          <h4>{work.tech}</h4>
+                        </Col9>
+                      </Work>
+                    ))
+                  }
+                </div>
               </Col8>
             </Row>
           
@@ -221,5 +236,26 @@ const Langs = styled(Col4)`
     }
     h3{
       margin:2px 0px 0px 0px;
+    }
+`
+
+const Work = styled(Row)`
+    align-self: center;
+    margin: 10px 0px 5px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    h3{
+      text-align:left;
+    }
+    img{
+      width: 96px;
+      border-radius: 8px;
+    }
+    h4{
+      font-weight: 200;
+      font-size:9pt;
+      margin: 0px;
+      text-align: left;
     }
 `

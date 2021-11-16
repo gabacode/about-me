@@ -38,6 +38,13 @@ const Col = styled.div`
 	position: relative;
 	width: 100%;
 `
+
+const Col3 = styled(Col)`
+	-ms-flex: 0 0 25%;
+	flex: 0 0 25%;
+	max-width: 25%
+`
+
 const Col4 = styled(Col)`
     -ms-flex: 0 0 33.333333%;
     flex: 0 0 33.333333%;
@@ -56,10 +63,16 @@ const Col8 = styled(Col)`
     max-width: 66.666667%;
 `
 
+const Col9 = styled(Col)`
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%
+`
+
 const Col12 = styled(Col)`
 	-ms-flex: 0 0 100%;
 	flex: 0 0 100%;
 	max-width: 100%
 `
 
-export {Container, Row, Col, Col4, Col6, Col8, Col12}
+export {Container, Row, Col, Col3, Col4, Col6, Col8, Col9, Col12}

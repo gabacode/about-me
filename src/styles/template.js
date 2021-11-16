@@ -12,7 +12,7 @@ const Center = styled.div`
   font-size: calc(10px + 2vmin);
 `
 const A4 = styled.div`
-  border-radius: 2px;
+  border-radius: 3px;
   position: relative;
   background-color: white;
   height: 297mm;
