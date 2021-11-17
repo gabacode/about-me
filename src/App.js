@@ -115,21 +115,16 @@ export default function CV() {
             <Footer>
               <div style={{marginTop:'50px'}}>
                 <p>
-                  Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base all’art. 13 del D. Lgs.
-                  196/2003 e all’art. 13 del Regolamento UE 2016/679, ed attesto la veridicità dello stesso ai sensi del DPR
-                  n.445/2000.
+                  {data.footer.auth}
                 </p>
-                <p>
-                  Il seguente CV è stato sviluppato in React, e il codice distribuito gratuitamente sotto licenza <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">CC BY 4.0 - Creative Commons</a>.
-                  <br/>Il repository è disponibile su GitHub al link <a href="https://github.com/gabacode/about-me" target="_blank" rel="noreferrer">https://github.com/gabacode/about-me</a>.
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: data.footer.repo }} />
               </div>
             </Footer>
           
           </Container>
         </A4>
         <PrintBtn onClick={() => print('printMe')}>
-          STAMPA
+          {data.footer.print.toUpperCase()}
         </PrintBtn>
       </Center>
     </>

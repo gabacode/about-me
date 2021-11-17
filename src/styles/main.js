@@ -70,7 +70,7 @@ const Work = styled(Row)`
     }
 `
 const Footer = styled(Row)`
-    p, a{
+    p, a, div{
       font-size:10px;
       text-align:center;
       color:#777;
