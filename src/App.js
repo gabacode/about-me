@@ -4,11 +4,8 @@ import { Container, Row, Col3, Col4, Col8, Col9 } from "./styles/bootstrap";
 import { Header, Flag, ProfilePic, Links, Langs, Work, Footer, PrintBtn } from "./styles/main";
 
 import content from "./assets/data";
+import langs from "./assets/languages";
 import print from "./lib/print";
-
-import Profile from "./assets/images/pics/profile.jpg";
-import en from "./assets/images/flags/en.svg";
-import it from "./assets/images/flags/it.svg";
 
 export default function CV() {
 
@@ -20,15 +17,18 @@ export default function CV() {
     <>
       <Center>
         <Row style={{position:'relative', top:'42px', right:'-99mm'}}>
-          <Flag src={en} onClick={() => setLanguage('en')} alt="English"/>
-          <Flag src={it} onClick={() => setLanguage('it')} alt="Italian"/>
+          {
+            langs.map(lang => (
+              <Flag src={lang.flag} onClick={() => setLanguage(lang.slug)} alt={lang.name} />
+            ))
+          }
         </Row>
         <A4 id='printMe'>
           <Container>
             
             <Header>
               <Col4>
-                <ProfilePic src={Profile} alt={data.personal.name} />
+                <ProfilePic src={data.personal.pic} alt={data.personal.name} />
               </Col4>
               <Col8>
                 <h1>{data.personal.name}</h1>
@@ -72,8 +72,7 @@ export default function CV() {
                               <h3 key={i}>
                                 {s.name ? `${s.name}: ${s.value}` : s.value}
                               </h3>
-                              )
-                            )
+                            ))
                           }
                         </div>
                         )
@@ -113,7 +112,7 @@ export default function CV() {
             </Row>
 
             <Footer>
-              <div style={{marginTop:'50px'}}>
+              <div style={{position:'absolute', bottom:'0', left:'50%', transform:'translate(-50%, 0)', width:'200mm'}}>
                 <p>
                   {data.footer.auth}
                 </p>

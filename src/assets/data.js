@@ -1,3 +1,4 @@
+import Profile from "./images/pics/profile.jpg";
 import Maresi from "./images/icons/maresi.png"
 import f8lite from "./images/icons/f8lite.png"
 import PAW from "./images/icons/paw.png"
@@ -16,6 +17,7 @@ const data = [
       Amo Python, Javascript e tutto ciò che si può costruire al di là del linguaggio utilizzato. 
       Lavoro su tutti i sistemi operativi, e seguo il modello OSI per troubleshooting.
       Studio attualmente Computer Science presso la University of The People, California, anche partecipando attivamente al gruppo di iniziativa civica nazionale OpenDataSicilia.`,
+      pic: Profile
     },
     contacts: [
       {
@@ -133,6 +135,7 @@ const data = [
       I love Python, Javascript and anything that can be built, regardless of the language used.
       I work with all OSs, and I follow the OSI model for troubleshooting.
       I'm a student of Computer Science at the University of The People, California, and I actively participate in the initiatives of civic hacking group OpenDataSicilia.`,
+      pic: Profile
     },
     contacts: [
       {

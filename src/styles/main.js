@@ -74,7 +74,7 @@ const Footer = styled(Row)`
       font-size:10px;
       text-align:center;
       color:#777;
-      margin: 10px auto;
+      margin: 14px auto;
     }
 `
 const PrintBtn = styled.button`
