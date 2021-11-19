@@ -68,7 +68,7 @@ const data = [
           },
           {
             name: "Backend",
-            value: "Node Express, Python Flask, PHP, Laravel, WordPress, SQL, MySQL, SQLite, MongoDB, JSON API ..."
+            value: "Node Express, Strapi, Python Flask, PHP, Laravel, WordPress, SQL, MySQL, SQLite, MongoDB, JSON API ..."
           },
           {
             name: "Mobile",
@@ -186,7 +186,7 @@ const data = [
           },
           {
             name: "Backend",
-            value: "Node Express, Python Flask, PHP, Laravel, WordPress, SQL, MySQL, SQLite, MongoDB, JSON API ..."
+            value: "Node Express, Strapi, Python Flask, PHP, Laravel, WordPress, SQL, MySQL, SQLite, MongoDB, JSON API ..."
           },
           {
             name: "Mobile",
