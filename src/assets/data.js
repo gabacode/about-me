@@ -131,7 +131,7 @@ const data = [
       role: "Full Stack Web Developer",
       subtitle: "I love technology for the ways it can improve lives on this planet, and beyond.",
       description: `I lived in the United Kingdom for more than 10 years, where I nourished my passion for music and technology, whilst working as a musician, and as a bike courier. 
-      My passion for tech has always been strong since my childhood, and by growing up it only got worst.
+      My passion for tech has always been strong since my childhood, and by growing up it only got worse.
       I love Python, Javascript and anything that can be built, regardless of the language used.
       I work with all OSs, and I follow the OSI model for troubleshooting.
       I'm a student of Computer Science at the University of The People, California, and I actively participate in the initiatives of civic hacking group OpenDataSicilia.`,
