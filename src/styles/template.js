@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 const Center = styled.div`
   /* background by SVGBackgrounds.com */
@@ -11,7 +11,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-`
+`;
 const A4 = styled.div`
   border-radius: 3px;
   position: relative;
@@ -20,7 +20,7 @@ const A4 = styled.div`
   width: 210mm;
   margin: 60px auto;
   padding: 10mm;
-  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-`
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+`;
 
-export {Center, A4}
+export { Center, A4 };
