@@ -65,7 +65,8 @@ const data = [
         values: [
           {
             name: 'Frontend',
-            value: 'React, Next.js, Gatsby, Bootstrap, TailwindCSS ...',
+            value:
+              'React, Next.js, Gatsby, Angular, Syncfusion, Material UI, Theme UI, Bootstrap, TailwindCSS ...',
           },
           {
             name: 'Backend',
@@ -189,7 +190,8 @@ const data = [
         values: [
           {
             name: 'Frontend',
-            value: 'React, Next.js, Gatsby, Bootstrap, TailwindCSS ...',
+            value:
+              'React, Next.js, Gatsby, Angular, Syncfusion, Material UI, Theme UI, Bootstrap, TailwindCSS ...',
           },
           {
             name: 'Backend',
